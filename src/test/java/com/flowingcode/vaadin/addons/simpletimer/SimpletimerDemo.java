@@ -39,6 +39,7 @@ public class SimpletimerDemo extends Div {
         timer.setWidth("100px");
         timer.setHeight("50px");
         timer.getStyle().set("font-size", "40px");
+        timer.setSuffix("s");
         
         Span timerTitle = new Span("Simple Count Up Timer");
         

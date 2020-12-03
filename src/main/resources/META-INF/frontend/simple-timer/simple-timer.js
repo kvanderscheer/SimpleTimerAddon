@@ -97,6 +97,14 @@ Polymer({
         	value: false
         },
         /**
+         * Adds a suffix to display after the timer value
+         * @default ''
+         */
+        suffix: {
+          type: String,
+          value: ''
+        },
+        /**
         * Time the timer has spent running since it was started
         */
         _elapsedTime: {
@@ -177,6 +185,6 @@ Polymer({
         seconds = this.minutes || this.hours ? seconds % 60 : seconds;
         seconds = seconds < 10 ? '0' + seconds : seconds;
         
-        return (this.hours ? hours + ':' : '') + (this.minutes || this.hours ? minutes + ':' : '') + seconds + (this.fractions ? ('.' + timeString[1].substring(0,2)) : '') 
+        return (this.hours ? hours + ':' : '') + (this.minutes || this.hours ? minutes + ':' : '') + seconds + (this.fractions ? ('.' + timeString[1].substring(0,2)) : '') + this.suffix
       }
     });

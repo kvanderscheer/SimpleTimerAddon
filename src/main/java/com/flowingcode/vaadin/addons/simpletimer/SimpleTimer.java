@@ -111,6 +111,15 @@ public class SimpleTimer extends Component implements HasSize, HasStyle {
     }
 
     /**
+     * Adds a suffix to display after the timer value
+     *
+     * @param suffix
+     */
+    public void setSuffix(final String suffix) {
+        getElement().setProperty("suffix", suffix);
+    }
+
+    /**
      * Starts or stops the timer if it is already started
      */
     public void start() {
